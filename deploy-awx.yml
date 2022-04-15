@@ -1,0 +1,9 @@
+---
+- name: Install AWX
+  hosts: all
+  roles:
+    - role: shubhamtatvamasi.magma.prerequisites
+    - role: shubhamtatvamasi.magma.docker
+    - role: shubhamtatvamasi.magma.kubernetes
+    - role: shubhamtatvamasi.magma.openebs
+    - role: shubhamtatvamasi.magma.metallb
