@@ -1,0 +1,14 @@
+---
+- name: Set {{ awx_namespace }} as default namespace
+  command: kubectl config set-context --current --namespace {{ awx_namespace }}
+
+- name: Install AWX
+  kubernetes.core.k8s:
+    namespace: "{{ awx_namespace }}"
+    definition:
+      apiVersion: awx.ansible.com/v1beta1
+      kind: AWX
+      metadata:
+        name: awx
+      spec:
+        service_type: "{{ awx_service_type }}"

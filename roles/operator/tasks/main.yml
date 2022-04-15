@@ -1,0 +1,11 @@
+---
+- name: Clone awx-operator repo
+  git:
+    repo: https://github.com/ansible/awx-operator.git
+    dest: /tmp/awx-operator
+    version: "{{ awx_operator_version }}"
+
+- name: Install awx-operator
+  command: make deploy
+  args:
+    chdir: /tmp/awx-operator

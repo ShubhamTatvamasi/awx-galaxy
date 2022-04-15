@@ -7,3 +7,5 @@
     - role: shubhamtatvamasi.magma.kubernetes
     - role: shubhamtatvamasi.magma.openebs
     - role: shubhamtatvamasi.magma.metallb
+    - role: operator
+    - role: awx

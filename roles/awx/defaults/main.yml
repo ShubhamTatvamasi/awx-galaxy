@@ -1,0 +1,3 @@
+---
+awx_namespace: "awx"
+awx_service_type: "LoadBalancer"
