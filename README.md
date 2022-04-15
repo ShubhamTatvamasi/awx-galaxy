@@ -1,5 +1,10 @@
 # awx-galaxy
 
+Install dependant collections:
+```bash
+ansible-galaxy collection install -U shubhamtatvamasi.magma
+```
+
 Install AWX:
 ```bash
 ansible-playbook deploy-awx.yml
