@@ -4,6 +4,7 @@ Install AWX:
 ```bash
 ansible-playbook deploy-awx.yml
 ```
+> It takes 10 minutes to start after deployment is done.
 
 ID: `admin`, get password:
 ```bash
