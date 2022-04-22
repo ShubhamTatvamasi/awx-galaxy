@@ -1,0 +1,23 @@
+---
+- name: Create Ingress rule for AWX
+  kubernetes.core.k8s:
+    namespace: "{{ awx_namespace }}"
+    definition:
+      apiVersion: networking.k8s.io/v1
+      kind: Ingress
+      metadata:
+        name: awx
+        annotations:
+          kubernetes.io/ingress.class: caddy
+      spec:
+        rules:
+          - host: "{{ awx_domain }}"
+            http:
+              paths:
+              - path: /
+                pathType: Prefix
+                backend:
+                  service:
+                    name: awx-service
+                    port:
+                      number: 80
