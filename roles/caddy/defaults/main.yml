@@ -1,4 +1,2 @@
 ---
 caddy_ingress_chart_version: "1.0.0"
-caddy_autotls: true
-caddy_email: "caddy@example.com"
