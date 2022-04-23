@@ -1,5 +1,5 @@
 ---
-- name: Install AWX
+- name: Install AWX with Caddy
   hosts: all
   roles:
     - role: shubhamtatvamasi.magma.prerequisites
