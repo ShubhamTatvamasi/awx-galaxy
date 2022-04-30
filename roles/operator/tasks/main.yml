@@ -4,6 +4,7 @@
     repo: https://github.com/ansible/awx-operator.git
     dest: /tmp/awx-operator
     version: "{{ awx_operator_version }}"
+    force: yes
 
 - name: Install awx-operator
   command: make deploy
