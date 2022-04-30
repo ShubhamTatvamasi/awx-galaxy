@@ -1,0 +1,5 @@
+---
+- name: Upgrade AWX
+  hosts: all
+  roles:
+    - role: operator
