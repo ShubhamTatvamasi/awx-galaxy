@@ -8,8 +8,12 @@
       metadata:
         name: awx
         annotations:
-          kubernetes.io/ingress.class: caddy
+          cert-manager.io/cluster-issuer: letsencrypt
       spec:
+        tls:
+        - hosts:
+          - "{{ awx_domain }}"
+          secretName: awx-ingress-tls
         rules:
           - host: "{{ awx_domain }}"
             http:

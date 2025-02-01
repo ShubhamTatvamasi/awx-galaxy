@@ -7,9 +7,10 @@
     - role: shubhamtatvamasi.magma.kubernetes
     - role: shubhamtatvamasi.magma.openebs
     - role: shubhamtatvamasi.magma.metallb
+    - role: shubhamtatvamasi.magma.nginx
+    - role: cert_manager
     - role: operator
     - role: awx
       vars:
         awx_service_type: "ClusterIP"
-    - role: caddy
     - role: ingress
